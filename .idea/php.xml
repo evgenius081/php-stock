@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/core/Models" />
+      <path value="$PROJECT_DIR$/vendor/core/views" />
+      <path value="$PROJECT_DIR$/vendor/mongodb/tests" />
+      <path value="$PROJECT_DIR$/vendor/core/config" />
+      <path value="$PROJECT_DIR$/vendor/mongodb/docs" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/core/Modules" />
+      <path value="$PROJECT_DIR$/vendor/mongodb/src" />
+      <path value="$PROJECT_DIR$/vendor/core/controller" />
+    </include_path>
+  </component>
+</project>

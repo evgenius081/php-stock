@@ -1,0 +1,266 @@
+#main{
+    width: 83.6%;
+    margin: 50px;
+    margin-left: 8.2%;
+    padding-bottom: 0;
+}
+
+main form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    width: 100%;
+    border: 1px solid #000;
+    min-height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+#stock-gallery-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input[name="search-input"] {
+    border: none; 
+    outline: none;
+    -webkit-appearance: none; 
+    width: calc(100% - 30px); 
+    vertical-align: middle;
+    height: 40px;
+    font-size: 18px;
+}
+
+input[name="search-input"]::-webkit-input-placeholder {
+    font-size: 18px;
+} 
+
+input[name="search-input"]::-moz-placeholder {
+    font-size: 18px;
+}
+
+#stock-search-submit {
+    width: 30px; 
+    height: 30px; 
+    border: none; 
+    background: none;
+    cursor: pointer;
+}
+
+#stock-form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#stock-gallery{
+    width: 100%;
+    margin-left: -5px;
+}
+
+#gallery{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px; 
+    margin-left: -5px;
+}
+
+.stock-gallery-item{
+    height: 125px;
+    margin: 5px;
+    position: relative;
+}
+
+.stock-gallery-item img{
+    width: 200px;
+    height: 125px;
+    cursor: pointer;
+}
+
+.image-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: rgba(0,0,0, 0.5);
+    flex-direction: column;
+    clip-path: circle(0% at 50% 50%);
+    transition : all ease 0.4s;
+    text-align: center;
+}
+
+.stock-gallery-item:hover .image-info{
+    clip-path: circle(100% at 50% 50%);
+}
+
+.stock-gallery-item:hover img{
+    filter: blur(10px);
+    trnsform: scale(1.1);
+}
+
+.image-text{
+    margin-top: 30px;
+}
+
+.image-info p{
+    display: block;
+}
+
+.image-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Roboto-Thin;
+}
+
+.image-author{
+    font-size: 12px;
+}
+
+#stock-pagination{
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+#stock-pagination > div{
+    border: 1px solid #212121;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#stock-pagination a:not(.prev):not(.next){
+    display: block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.next, .prev{
+    display: block;
+    width: 50px;
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    z-index: 10;
+    border: 1px solid #000;
+}
+
+.next a i, .prev a i{
+    color: #fff;
+}
+
+.next{
+   border-bottom-right-radius: 5px;
+   border-top-right-radius: 5px;
+   border-left: none;
+}
+
+.prev{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: none;
+}
+
+.current{
+    font-size: 20px;
+    color: #000;
+    margin: 0 10px;
+}
+
+#stock-controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#stock-controls a, #stock-controls input{
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+
+#stock-controls a:first-child, #stock-controls a:nth-child(2){
+    margin-bottom: 20px;
+}
+
+#stock-controls a:hover, #stock-controls input:hover{
+    background-color: #fff;
+    color: #000;
+    transition: all ease 0.4s;
+}
+
+.simplebar-placeholder{
+    display: none;
+}
+
+.fa-heart{
+    margin-right: auto;
+}
+
+.a-container{
+    width: 100%;
+    padding: 0 8px 8px 8px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-user-lock{
+    margin-left: auto;
+}
+
+.favourites{
+    width: 0;
+}
+
+@media screen and (max-width: 960px){
+    #main{
+        padding:0;
+    }
+}
+
+@media screen and (max-width: 420px){
+    #stock-form{
+        flex-direction: column;
+    }
+
+    #stock-controls{
+        margin-top: 40px;
+    }
+}
